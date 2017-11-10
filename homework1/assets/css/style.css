@@ -66,6 +66,10 @@ footer {
 	text-align: center;
 }
 
+img:active {
+	filter: grayscale(100%);
+}
+
 #top {
 	width: 960px;
 	margin: auto;
@@ -125,6 +129,14 @@ footer {
 	color: blue;
 }
 
+.menu:active {
+	color: red;
+}
+
+.active {
+	background-color: #4aaaa5;
+	color: black;
+}
 .background {
 	height: auto;
 	width: auto;
