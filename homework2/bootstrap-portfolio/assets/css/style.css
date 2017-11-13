@@ -44,6 +44,11 @@
 	margin-right: auto;
 }
 
+.media-object {
+	display: block;
+	margin: auto;
+}
+
 body {
 	background-image: url("../images/background.png");
 	background-position: top left;
@@ -52,6 +57,16 @@ body {
 
 h1 {
 	color: #4aaaa5;
+}
+
+footer {
+	background: black;
+	line-height: 36px;
+	text-align: center;
+	color: white;
+	position: fixed;
+	bottom: 0px;
+	width: 100vw;
 }
 
 @media (max-width: 576px) {
@@ -66,8 +81,4 @@ h1 {
 		text-align: center;
 	}
 
-	.media-object {
-		display: block;
-		margin: auto;
-	}
 }
