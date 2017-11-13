@@ -69,7 +69,7 @@ footer {
 	width: 100vw;
 }
 
-@media (max-width: 576px) {
+@media (min-width: 376px) {
 	.profile {
 		display: block;
 		margin: auto;
