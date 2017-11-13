@@ -1,0 +1,62 @@
+.profile {
+	width: 250px;
+	border: 3px solid #4aaaa5;
+}
+
+.navbar-default {
+	background-color: #4aaaa5;
+}
+
+.panel-heading {
+	background-color: #4aaaa5;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+}
+
+.navbar-default .my-brand {
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.navbar-default .my-brand:hover {
+	color: white;
+}
+
+.panel {
+	border: 2px solid lightgrey;
+}
+
+.nav.navbar-nav.navbar-right li a {
+	color: white;
+}
+
+.connect {
+	float: left;
+	margin: auto;
+	display: block;
+}
+
+body {
+	background-image: url("../images/background.png");
+	background-position: top left;
+	background-repeat: repeat-x repeat-y;
+}
+
+h1 {
+	color: #4aaaa5;
+}
+
+@media (max-width: 576px) {
+	.profile {
+		display: block;
+		margin: auto;
+		width: 300px;
+		margin-bottom: 10px;
+	}
+
+	p {
+		text-align: center;
+	}
+}
