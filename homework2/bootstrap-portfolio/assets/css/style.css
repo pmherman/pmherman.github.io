@@ -38,6 +38,12 @@
 	display: block;
 }
 
+.center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 body {
 	background-image: url("../images/background.png");
 	background-position: top left;
@@ -58,5 +64,10 @@ h1 {
 
 	p {
 		text-align: center;
+	}
+
+	.media-object {
+		display: block;
+		margin: auto;
 	}
 }
