@@ -1,5 +1,5 @@
 .profile {
-	width: 250px;
+	width: 225px;
 	border: 3px solid #4aaaa5;
 }
 
@@ -49,6 +49,27 @@
 	margin: auto;
 }
 
+.title {
+	border-bottom: 3px solid #4aaaa5;
+}
+
+.media-object {
+	width: 250px;
+	height: 150px;
+}
+
+.label-1 {
+	display: inline;
+	position: absolute;
+	width: 250px;
+	margin: auto;
+	line-height: 35px;
+	background-color: #4aaaa5;
+	text-align: center;
+	top: 105px;
+	left: 65px;
+}
+
 body {
 	background-image: url("../images/background.png");
 	background-position: top left;
@@ -69,7 +90,7 @@ footer {
 	width: 100vw;
 }
 
-@media (min-width: 376px) {
+@media (min-width: 0px) and (max-width: 1000px) {
 	.profile {
 		display: block;
 		margin: auto;
@@ -80,5 +101,5 @@ footer {
 	p {
 		text-align: center;
 	}
-
 }
+
