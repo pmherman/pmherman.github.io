@@ -264,21 +264,20 @@ img:active {
 
 
 @media (max-width: 640px) {
-
-	#container {
-		width: 80%
+	#content {
+		width: auto;
 	}
-
 	#contact {
 		float: none;
-
 		display: block;
+		width: auto;
 	}
 
 	#page {
 		margin: auto;
 		float: none;
 		display: block;
+		width: auto;
 
 	}
 
@@ -286,6 +285,10 @@ img:active {
 		float: none;
 		position: relative;
 		width: 300px;
+	}
+
+	#top {
+		width: 100vw;
 	}
 
 	#head {
@@ -310,5 +313,9 @@ img:active {
 
 	h2 {
 		text-align: center;
+	}
+
+	footer {
+		width: 102vw;
 	}
 }
