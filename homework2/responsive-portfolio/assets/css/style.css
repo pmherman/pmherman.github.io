@@ -1,26 +1,26 @@
 h1 {
 	font-family: 'Georgia', Times, Times New Roman, serif;
-	font-size: 28px
+	font-size: 2em;
 	color: white;
 }
 
 h2 {
 	font-family: 'Georgia', Times, Times New Roman, serif;
-	font-size: 24px;
+	font-size: 1.7em;
 	font-weight: bold;
 	color: #4aaaa5;
 }
 
 h3 {
 	font-family: 'Georgia', Times, Times New Roman, serif;
-	font-size: 18px;
+	font-size: 1.3em;
 	font-weight: bold;
 	color: #4aaaa5;
 }
 
 p {
 	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-	font-size: 12px;
+	font-size: 1em;
 	font-weight: bold;
 }
 
@@ -33,7 +33,7 @@ header {
 }
 
 ul {
-	font-size: 12px;
+	font-size: 1em;
 	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 	font-weight: bold;
 	color: #777777;
@@ -84,10 +84,10 @@ img:active {
 	background-image: url("../images/background.png");
 	background-position: top left;
 	background-repeat: repeat-x repeat-y;
-	min-width: 102vw;
+	min-width: 100vw;
 	height: 100vh;
 	left: 0px;
-	position: absolute;
+	position: relative;
 	border-top: 3px solid #cccccc;
 	}
 
@@ -121,7 +121,7 @@ img:active {
 	text-decoration-line: none;
 	font-weight: bold;
 	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;;
-	font-size: 13px;
+	font-size: 1em;
 	color: #dddddd;
 }
 
@@ -172,6 +172,7 @@ img:active {
 #profile { /*My profile picture*/
 	border: 4px solid #4aaaa5;
 	float: left;
+	width: 200px;
 	clear: none;
 	margin: 1px 8px 5px 0px;
 }
@@ -263,6 +264,8 @@ img:active {
 
 
 @media (max-width: 640px) {
+
+
 	#container {
 		width: 640px;
 		height: 100vh;
@@ -277,5 +280,25 @@ img:active {
 		float: none;
 		display: block;
 		width: 100%;
+	}
+
+	#profile {
+		float: none;
+		position: relative;
+		left: 40px;
+		width: 90%;
+	}
+
+	#head {
+		width: 100%;
+		text-align: center;
+		font-size: 3em;
+	}
+
+	#menu {
+		width: 100%;
+		line-height: 2.5em;
+		font-size: 2em;
+		text-align: center;
 	}
 }
