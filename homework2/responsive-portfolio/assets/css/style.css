@@ -231,7 +231,74 @@ img:active {
 
 @media (max-width: 640px) {
 	#content {
+		width: 100%;
+		overflow: none;
+	}
+	#contact {
+		float: none;
+		display: block;
+		width: 87%;
+		margin: auto;
+	}
+
+	#page {
+		margin: auto;
+		float: none;
+		display: block;
 		width: 80%;
+
+	}
+
+	#container {
+		width: 100%;
+		height: 100%;
+	}
+
+	#profile {
+		float: none;
+		position: relative;
+		width: 100%;
+	}
+
+	#top {
+		width: 100%;
+		left: 0px;
+		position: relative;
+	}
+
+	#head {
+		position: static;;
+		width: 95%;
+		clear: all;
+		text-align: center;
+		display: block;
+		padding: auto;
+		margin: auto;
+		left: 0px;
+
+	}
+
+	#menu {
+		width: 95%;
+		display: block;
+		clear:all;
+		text-align: center;
+		padding: 10px;
+
+	}
+
+	h2 {
+		text-align: center;
+	}
+
+	footer {
+		width: 100vw;
+	}
+}
+
+@media (max-width: 768px) {
+	#content {
+		width: 100%;
 		overflow: none;
 	}
 	#contact {
