@@ -1,0 +1,16 @@
+#lives {
+	text-align: center;
+	font-size: 2em;
+}
+
+#wordHolder {
+	text-align: center;
+	font-size: 3em;
+	font-weight: bolder;
+}
+
+#usedLetters {
+	text-align: center;
+	font-size: 3em;
+	color: red;
+}
