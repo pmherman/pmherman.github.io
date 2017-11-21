@@ -9,7 +9,25 @@
 	font-weight: bolder;
 }
 
+#wins {
+	text-align: center;
+	font-size: 3em;
+	font-weight: bolder;
+}
+
+#loss {
+	text-align: center;
+	font-size: 3em;
+	font-weight: bolder;
+}
+
 #usedLetters {
+	text-align: center;
+	font-size: 3em;
+	color: red;
+}
+
+#guessesRemain {
 	text-align: center;
 	font-size: 3em;
 	color: red;
