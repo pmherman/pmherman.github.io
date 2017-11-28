@@ -36,6 +36,20 @@
 			<div class="col-md-12 text-center">
 				<button class="btn btn-primary btn-md" type="button" id="photoHint" onclick="photoHint()">Photo Hint</button>
 				<button class="btn btn-primary btn-md" type="button" id="gameStart" onclick="gameStart()">Play Again</button>
+				<script type="text/javascript">
+					function photoHint() {
+							if (randomWord == wordBank[1]) {
+								document.getElementById("hint").src="assets/images/ds9.png";
+							}
+							if (randomWord == wordBank[3]) {
+								document.getElementById("hint").scr="assets/images/ds9.png";
+							}
+
+							else {
+								document.getElementById("hint").src="assets/images/startrek.png";
+							}
+						};
+				</script>
 				<br><br>
 			</div>
 		</div>
