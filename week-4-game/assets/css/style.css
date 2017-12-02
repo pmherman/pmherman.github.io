@@ -1,0 +1,41 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+header {
+    background-color: black;
+    color: white;
+}
+
+.box {
+    background-color: white;
+    width: 150px;
+    height: 150px;
+    margin: 2px;
+    border: 2px solid green;
+    display: inline-block;
+}
+
+.avatar {
+    border: 2px solid red;
+    width: 100px;
+    height: 100px;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 100px;
+    margin-top: 8px;
+}
+
+.name {
+    color: red;
+    margin-top: 3px;
+
+}
+
+.stats {
+    color: white;
+    display: none;
+}
