@@ -8,6 +8,16 @@ header {
     color: white;
 }
 
+body {
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page-header {
+    background-color: transparent
+}
+
 .box {
     background-color: white;
     width: 150px;
@@ -38,4 +48,8 @@ header {
 .stats {
     color: white;
     display: none;
+}
+
+.dead {
+    filter: grayscale(100%);
 }
