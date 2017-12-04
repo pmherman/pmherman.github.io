@@ -53,3 +53,24 @@ body {
 .dead {
     filter: grayscale(100%);
 }
+
+#winAlert {
+    display: none;
+    color: green;
+    font-size: 5em;
+    text-align: center;
+}
+
+#lossAlert {
+    display: none;
+    color: red;
+    font-size: 5em;
+    text-align: center;
+}
+
+#newGame {
+    display: none;
+    width: 400px;
+    height: 150px;
+    margin-left: 500px;
+}
