@@ -1,16 +1,16 @@
 
 
 	//Heroes
-	var flash = {name: "Flash", health: "300", strength: "10", counter: "8"};
-	var arrow = {name: "Green Arrow", health: "275", strength: "6", counter: "5"};
-	var superGirl = {name: "Supergirl", health: "450", strength: "15", counter: "13"};
-	var atom = {name: "Atom", health: "310", strength: "12", counter: "10"};
+	var flash = {name: "Flash", health: "250", strength: "3", counter: "3"};
+	var arrow = {name: "Green Arrow", health: "200", strength: "2", counter: "2"};
+	var superGirl = {name: "Supergirl", health: "400", strength: "5", counter: "5"};
+	var atom = {name: "Atom", health: "275", strength: "4", counter: "4"};
 
 	//Villians
-	var reverseFlash = {name: "Reverse Flash", health: "400", strength: "10", counter: "8"};
-	var brainiac = {name: "Brainiac", health: "175", strength: "6", counter: "5"};
-	var damienDarhk = {name: "Damien Darhk", health: "550", strength: "15", counter: "13"};
-	var deathStroke = {name: "Death Stroke", health: "310", strength: "12", counter: "10"};
+	var reverseFlash = {name: "Reverse Flash", health: "400", strength: "20", counter: "30"};
+	var brainiac = {name: "Brainiac", health: "175", strength: "12", counter: "20"};
+	var damienDarhk = {name: "Damien Darhk", health: "550", strength: "30", counter: "26"};
+	var deathStroke = {name: "Death Stroke", health: "310", strength: "24", counter: "20"};
 
 	var userSelection = {name: "none"};
 	var oppSelection = {name: "none"};
@@ -108,13 +108,13 @@ function runGame() {
 		    $(".curStatsOpp").removeClass("curStatsOpp");
 		    $(".currentEnemy").removeClass("currentEnemy");
 		    if (userSelection == flash) {
-		    	userSelection.strength = 10;
+		    	userSelection.strength = 3;
 		    } else if (userSelection == arrow) {
-		    	userSelection.strength = 6;
+		    	userSelection.strength = 2;
 		    } else if (userSelection == superGirl) {
-		    	userSelection.strength = 15;
+		    	userSelection.strength = 5;
 		    } else if (userSelection == atom) {
-		    	userSelection.strength = 12;
+		    	userSelection.strength = 4;
 		    }
 		}
 		if (damienDarhk.health < "0" && brainiac.health < "0" && deathStroke.health < "0" && reverseFlash.health < "0" ) {
@@ -167,39 +167,11 @@ function newGame() {
 
 $("#reset").on("click", function() {
 
-	$("#reset").css("display", "inline");
-	$("#attack").css("display", "inline");	
-	$("#newGame").css("display", "none");
-	
-	flash.health = 300;
-	arrow.health = 275;
-	superGirl.health = 450;
-	atom.health = 310;
-
-	reverseFlash.health = 100;
-	brainiac.health = 175;
-	deathStroke.health = 210
-	damienDarhk.health = 510;
-	
-	newGame();
+	location.reload();
 });
 
 $("#newGame").on("click", function() {
 
-	$("#reset").css("display", "inline");
-	$("#attack").css("display", "inline");	
-	$("#newGame").css("display", "none");
-
-	flash.health = 300;
-	arrow.health = 275;
-	superGirl.health = 450;
-	atom.health = 310;
-
-	reverseFlash.health = 100;
-	brainiac.health = 175;
-	deathStroke.health = 210
-	damienDarhk.health = 510;
-	
-	newGame();
+	location.reload();
 })
 
