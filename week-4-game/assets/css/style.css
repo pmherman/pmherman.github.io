@@ -48,6 +48,7 @@ body {
 .stats {
     color: white;
     display: none;
+    text-shadow: 2px 2px red;
 }
 
 .dead {
@@ -58,14 +59,14 @@ body {
     display: none;
     color: green;
     font-size: 3em;
-    text-align: center;
+    text-shadow:2px 2px white;
 }
 
 #lossAlert {
     display: none;
     color: red;
+    text-shadow:2px 2px white;
     font-size: 3em;
-    text-align: center;
 }
 
 #newGame {

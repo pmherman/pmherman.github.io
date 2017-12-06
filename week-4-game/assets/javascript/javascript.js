@@ -8,10 +8,10 @@
 	var atom = {name: "Atom", health: 400, strength: 4, original: 4};
 
 	//Villians
-	var reverseFlash = {name: "Reverse Flash", health: 225, strength: 10, counter: 15};
-	var brainiac = {name: "Brainiac", health: 175, strength: 6, counter: 20};
-	var damienDarhk = {name: "Damien Darhk", health: 500, strength: 15, counter: 13};
-	var deathStroke = {name: "Death Stroke", health: 250, strength: 12, counter: 10};
+	var reverseFlash = {name: "Reverse Flash", health: 225, strength: 10, counter: 9};
+	var brainiac = {name: "Brainiac", health: 175, strength: 6, counter: 10};
+	var damienDarhk = {name: "Damien Darhk", health: 500, strength: 15, counter: 10};
+	var deathStroke = {name: "Death Stroke", health: 250, strength: 12, counter: 8};
 
 	var userSelection = {name: "none"};
 	var oppSelection = {name: "none"};
