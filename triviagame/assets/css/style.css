@@ -1,0 +1,108 @@
+.container-fluid {
+	display: none;
+}
+
+@font-face {
+	font-family: dragonballz;
+	src: url(font/Saiyan-Sans.ttf);
+}
+
+body {
+	background-image: url(../images/background.jpg);
+}
+
+h2 {
+	font-size: 60px;
+}
+
+button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+.btn:hover {
+	color: orange;
+}
+
+.btn:active {
+	color: none;
+}
+
+.btn {
+	font-size: 36px;
+	color: red;
+	font-family: dragonballz;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	letter-spacing: 4px;
+}
+
+.gif {
+	width: 300px;
+}
+
+#image {
+	display: none;
+}
+
+#title {
+	font-size: 6em;
+	font-family: dragonballz;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	letter-spacing: 4px;
+	color: orange;
+}
+
+.wrong { 
+	font-size: 5em;
+	font-family: dragonballz;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	letter-spacing: 4px;
+	color: orange;
+ }
+
+#subtitle {
+	color: blue;
+}
+
+#counter {
+	font-size: 5em;
+	font-family: dragonballz;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	letter-spacing: 6px;
+	color: orange;
+}
+
+#question {
+	font-size: 3em;
+	color: white;
+	letter-spacing: 4px;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	font-family: dragonballz;
+}
+
+#results {
+	font-size: 3em;
+	color: white;
+	font-weight: bold;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#start {
+	color: black;
+}
+
+#start:hover {
+	color: darkred;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#audio {
+	display: none;
+}
+
+
+

@@ -1,9 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<meta charset="utf-8">
+	<title>Trivia Game</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
+	<h1 class="text-center" id="title">Dragon Ball Z: &nbsp&nbsp<br> <div id="subtitle">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTrivia Edition</div></h1>
 
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="text-center" id="game">
+					<div class="text-center" id="counter"></div>
+					<div class="text-center" id="winLoss"></div>
+					<div class="text-center" id="question"></div>
+					<div class="text-center" id="answerBank">
+						<button class="btn" value="a" id="answer1"></button><br>
+						<button class="btn" value="b" id="answer2"></button><br>
+						<button class="btn" value="c" id="answer3"></button><br>
+						<button class="btn" value="d" id="answer4"></button>
+					</div>
+					<div id="image"></div>
+					<div id="wrong"></div>
+			</div>
+		</div>
+		</div>
+		<br><br>
+		<div class="col-lg-12" id="results">
+			<div class ="text-center" id="correct"></div>
+			<div class ="text-center" id="incorrect"></div>
+			<div class ="text-center" id="unanswered"></div>
+		</div>
+<!-- 		<audio id="audio"></audio> -->
+	</div>
+	<script src="assets/javascript/javascript.js" type="text/javascript"></script>
 </body>
 </html>
