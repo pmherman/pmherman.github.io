@@ -28,10 +28,6 @@ button {
 	color: orange;
 }
 
-.btn:active {
-	color: none;
-}
-
 .btn {
 	font-size: 36px;
 	color: red;
