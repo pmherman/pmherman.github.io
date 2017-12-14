@@ -24,6 +24,10 @@ button {
     outline:none;
 }
 
+#gameOver {
+	display: none;
+}
+
 .btn:hover {
 	color: orange;
 }
@@ -62,6 +66,7 @@ button {
 
 #subtitle {
 	color: blue;
+	font-family: dragonballz;
 }
 
 #counter {
@@ -89,6 +94,8 @@ button {
 
 #start {
 	color: black;
+	font-family: dragonballz;
+	font-size: 3em;
 }
 
 #start:hover {
