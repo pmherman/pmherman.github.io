@@ -13,6 +13,20 @@ function buttons() {
 		$("#buttons").append(b);
 	}
 }
+
+	$("#buttonAdd").on("click", function(event) {
+		event.preventDefault();
+
+		var newGif = $("#buttonInput").val().trim();
+
+		gifs.push(newGif);
+
+		$("#buttons").empty();
+
+		buttons();		
+	})
+
+
 	$(document).on("click", ".gif-btn.btn", function() {
 
 		$("#gifs").empty();
@@ -34,15 +48,15 @@ function buttons() {
 
 			for (var i=0; i < results.length; i++) {
 				if (results[i].rating !== "r") {
-					var gifDisplay = $("<div class='item'>");
+					var gifDisplay = $("<div class='col-md-4'>");
 
 					var rating = results[i].rating;
 
 					var p = $("<p>").text("Gif Rating: " + rating);
 
-					var buttonImage = $("<img>");
+					var buttonImage = $("<img id='gifImage'>");
 
-					buttonImage.attr("src", results[i].images.fixed_height.url);
+					buttonImage.attr("src", results[i].images.fixed_width_downsampled.url);
 
 					gifDisplay.html(p);
 					gifDisplay.append(buttonImage);

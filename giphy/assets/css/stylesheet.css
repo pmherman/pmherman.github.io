@@ -18,6 +18,11 @@
 	font-weight: bold;
 }
 
+#rating {
+	display: block;
+	margin: 0px;
+}
+
 body {
 	background-color: #f2f2f2;
 }
