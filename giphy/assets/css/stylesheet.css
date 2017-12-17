@@ -1,0 +1,23 @@
+#head {
+	background-color: teal;
+	font-family: verdana;
+	font-weight: bold;
+	color: white;
+	margin: auto;
+}
+
+#title {
+	margin: auto;
+}
+
+.btn {
+	margin: 3px;
+	background-color: teal;
+	color: white;
+	font-family: verdana;
+	font-weight: bold;
+}
+
+body {
+	background-color: #f2f2f2;
+}
