@@ -4,7 +4,7 @@ var gifs = ["Star Trek", "DragonBall Z", "Code Geass", "Gundam Seed", "Family Gu
 function footer() {
 	var foot = $("<footer>");
 
-	foot.addClass("footer text-");
+	foot.addClass("footer text-center");
 	foot.html("<p>Copyright 2017. All Rights Reserved");
 
 	$("body").append(foot);
