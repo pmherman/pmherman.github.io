@@ -24,87 +24,88 @@ function buttons() {
 		$("#buttons").append(b);
 	}
 }
-	//Adds additional buttons as needed for increased search results
-	$("#buttonAdd").on("click", function(event) {
+//Adds additional buttons as needed for increased search results
+$("#buttonAdd").on("click", function(event) {
+	event.preventDefault();
+
+	var newGif = $("#buttonInput").val().trim();
+
+	gifs.push(newGif);
+
+	$("#buttons").empty();
+
+	buttons();		
+})
+
+
+$(document).on("click", ".gif-btn.btn", function() {
+
+	$("#gifs").empty();
+
+	console.log("Clicked");
+
+	var gifButton = $(this).attr("gif-type");
+	//Holds the Giphy API information with a variable for the button
+	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + gifButton + "&api_key=dc6zaTOxFJmzC&limit=10";
+
+	$.ajax({
+		url: queryURL,
+		method: "GET"
+	})
+
+	.done(function(response) {
+
+		var results = response.data;
+		console.log(results);
+
+		//Creates the for loop that grabs the button names from the array.
+		for (var i=0; i < results.length; i++) {
+			if (results[i].rating !== "r") {
+				//creates the gifDisplay div to house the giphy
+				var gifDisplay = $("<div class='col-md-4'>");
+				//grabs the rating
+				var rating = results[i].rating;
+
+				var p = $("<p>").text("Gif Rating: " + rating);
+
+				var buttonImage = $("<img>");
+				//creates the buttons and adds the class
+				buttonImage.addClass("gifImage");
+				//Default animated image
+				buttonImage.attr("src", results[i].images.fixed_width_downsampled.url) ;
+				buttonImage.attr("data-state", "animate");
+				//Still image that can be called on click
+				buttonImage.attr("data-still", results[i].images.fixed_width_still.url);
+				buttonImage.attr("data-animate", results[i].images.fixed_width_downsampled.url);					
+				//addes the gif to the DOM
+				gifDisplay.html(p);
+				gifDisplay.append(buttonImage);
+
+				$("#gifs").prepend(gifDisplay);
+			}
+		}			
+
+	});
+	$(document).on("click", ".gifImage", function(){
+		//creates the dynamic clicking event for stopping and starting the gif
 		event.preventDefault();
 
-		var newGif = $("#buttonInput").val().trim();
+		$(".gifImages").empty();
 
-		gifs.push(newGif);
+		var state = $(this).attr("data-state");
 
-		$("#buttons").empty();
+		console.log("Clicked: " + state);
 
-		buttons();		
-	})
+		if (state === "animate") {
+			$(this).attr("src", $(this).attr("data-still"));
+			$(this).attr("data-state", "still");
+		} else if (state === "still") {
+			$(this).attr("src", $(this).attr("data-animate"));
+			$(this).attr("data-state", "animate");
+		}				
+	})			
 
-
-	$(document).on("click", ".gif-btn.btn", function() {
-
-		$("#gifs").empty();
-
-		console.log("Clicked");
-
-		var gifButton = $(this).attr("gif-type");
-		//Holds the Giphy API information with a variable for the button
-		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + gifButton + "&api_key=dc6zaTOxFJmzC&limit=10";
-
-		$.ajax({
-			url: queryURL,
-			method: "GET"
-		})
-
-		.done(function(response) {
-
-			var results = response.data;
-
-			//Creates the for loop that grabs the button names from the array.
-			for (var i=0; i < results.length; i++) {
-				if (results[i].rating !== "r") {
-					//creates the gifDisplay div to house the giphy
-					var gifDisplay = $("<div class='col-md-4'>");
-					//grabs the rating
-					var rating = results[i].rating;
-
-					var p = $("<p>").text("Gif Rating: " + rating);
-
-					var buttonImage = $("<img>");
-					//creates the buttons and adds the class
-					buttonImage.addClass("gifImage");
-					//Default animated image
-					buttonImage.attr("src", results[i].images.fixed_width_downsampled.url) ;
-					buttonImage.attr("data-state", "animate");
-					//Still image that can be called on click
-					buttonImage.attr("data-still", results[i].images.fixed_width_still.url);
-					buttonImage.attr("data-animate", results[i].images.fixed_width_downsampled.url);					
-					//addes the gif to the DOM
-					gifDisplay.html(p);
-					gifDisplay.append(buttonImage);
-
-					$("#gifs").prepend(gifDisplay);
-				}
-			}			
-
-		});
-		$(document).on("click", ".gifImage", function(){
-			//creates the dynamic clicking event for stopping and starting the gif
-			event.preventDefault();
-
-			$(".gifImages").empty();
-
-			var state = $(this).attr("data-state");
-
-			if (state === "animate") {
-				$(this).attr("src", $(this).attr("data-still"));
-				$(this).attr("data-state", "still");
-				console.log("still");
-			} else if (state === "still") {
-				$(this).attr("src", $(this).attr("data-animate"));
-				$(this).attr("data-state", "animate");
-				console.log("animate");
-			}				
-		})			
-
-	})
+})
 
 //Calls my functions 	
 buttons();
