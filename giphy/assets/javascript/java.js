@@ -86,7 +86,7 @@ $(document).on("click", ".gif-btn.btn", function() {
 		}			
 
 	});
-	$(document).on("click", ".gifImage", function(){
+	$(document).off("click").on("click", ".gifImage", function(){
 		//creates the dynamic clicking event for stopping and starting the gif
 		event.preventDefault();
 
