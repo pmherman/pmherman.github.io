@@ -72,8 +72,8 @@ $(document).on("click", ".gif-btn.btn", function() {
 				//creates the buttons and adds the class
 				buttonImage.addClass("gifImage");
 				//Default animated image
-				buttonImage.attr("src", results[i].images.fixed_width_downsampled.url) ;
-				buttonImage.attr("data-state", "animate");
+				buttonImage.attr("src", results[i].images.fixed_width_still.url);
+				buttonImage.attr("data-state", "still");
 				//Still image that can be called on click
 				buttonImage.attr("data-still", results[i].images.fixed_width_still.url);
 				buttonImage.attr("data-animate", results[i].images.fixed_width_downsampled.url);					
