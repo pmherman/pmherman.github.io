@@ -83,6 +83,10 @@
 	border: 0px none;
 	}
 
+#resume {
+	margin: auto;
+}
+
 body {
 	background-image: url("../images/background.png");
 	background-position: top left;
