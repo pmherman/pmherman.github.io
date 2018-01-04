@@ -37,7 +37,7 @@ $("#buttonAdd").on("click", function(event) {
 	buttons();		
 })
 
-
+//Creates the for loop that grabs the button names from the array.
 $(document).on("click", ".gif-btn.btn", function() {
 
 	$("#gifs").empty();
@@ -58,7 +58,7 @@ $(document).on("click", ".gif-btn.btn", function() {
 		var results = response.data;
 		console.log(results);
 
-		//Creates the for loop that grabs the button names from the array.
+		//Creates the loop based on the results from the giphu get command to push to the DOM
 		for (var i=0; i < results.length; i++) {
 			if (results[i].rating !== "r") {
 				//creates the gifDisplay div to house the giphy
