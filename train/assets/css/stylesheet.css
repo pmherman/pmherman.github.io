@@ -1,0 +1,9 @@
+input {
+	width: 95vw;
+}
+
+.panel {
+	width: 98vw;
+	margin: auto;
+	margin-top: 25px;
+}

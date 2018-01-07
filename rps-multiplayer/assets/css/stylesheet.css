@@ -1,0 +1,12 @@
+.playerArea {
+	border: 1px solid black;
+	width: 15em;
+	height: 15em;
+	margin-right: 5em;
+	display: inline-block;
+}
+
+
+body {
+	background-color: #cce6ff;
+}
