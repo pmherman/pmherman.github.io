@@ -1,9 +1,33 @@
 input {
 	width: 95vw;
+	border: 1px solid black;
+}
+
+#train {
+	font-weight: bold;
+	margin-bottom: 1px;
+	margin-top: 1px;
 }
 
 .panel {
 	width: 98vw;
 	margin: auto;
 	margin-top: 25px;
+	border: 1px solid  #ccffff;
+}
+
+.jumbotron {
+	background-color: #ccffff;
+}
+
+.panel-default>.panel-heading {
+	background-color:  #ccffff;
+}
+
+#formSubmit {
+	background-color: #47d147;
+}
+
+#delete {
+	background-color: #ff8566;
 }
