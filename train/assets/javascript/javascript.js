@@ -67,22 +67,18 @@
 
     var newRow = $("<tr>");
 
-    newRow.append("<td>" + snapshot.val().name + "</td> <td>" + snapshot.val().destination + "</td> <td>" + snapshot.val().frequency + " Minutes</td> <td>" + moment(nextArrival).format("hh:mm a") + "</td> <td>" + minutesAway + "</td> <td> <button id='delete'>" + "Delete" + "</button> </td>" );
+    newRow.append("<td>" + snapshot.val().name + "</td> <td>" + snapshot.val().destination + "</td> <td>" + snapshot.val().frequency + " Minutes</td> <td>" + moment(nextArrival).format("hh:mm a") + "</td> <td>" + minutesAway + "</td> <td> <button data-id='" + snapshot.key +"' class='delete'>" + "Delete" + "</button> </td>" );
+
+    console.log("Key: " + snapshot.key);
 
     $("#trainData").append(newRow);
 
   })
 
-  $("#delete").on("click", function() {
-    database.ref().remove( {
-       name: name,
+  $(document).on("click", ".delete", function(e) {
+    e.preventDefault();
+    console.log($(this).attr("data-id"));
+    database.ref().child($(this).attr("data-id")).remove();
+    location.reload();
+  });
 
-      destination: destination,
-
-      frequency: frequency,
-
-      firstArrival: firstArrival,
-
-      dateAdded: firebase.database.ServerValue.TIMESTAMP     
-    });
-  })
