@@ -17,6 +17,16 @@
   var firstArrival;
   var minAway;
 
+  $(document).ready(function() {
+    var currentTime = moment();
+
+    var time = $("<p id='time' class='text-center'>");
+
+    time.append("The Current Time is: " + moment().format("hh:mm:ss a"));
+
+    $(".jumbotron").append(time);
+  })
+
   $("#formSubmit").on("click", function() {
     name = $("#name-input").val().trim();
     destination = $("#destination-input").val().trim();
@@ -41,18 +51,38 @@
 
     console.log("Name: " + snapshot.val().name); 
 
-    var nextArrival = (moment(snapshot.val().firstArrival, 'HH:mm').add(snapshot.val().frequency, "m").format('hh:mm a'));
+    var firstArrivalConverted = moment(snapshot.val().firstArrival, "hh:mm").subtract(1, "years");
 
-    console.log("Arrival Time: " + nextArrival);
+    console.log(moment(firstArrivalConverted).format("hh:mm"));
 
-    var minutesAway = moment(nextArrival, "HH:mm").toNow();
+    var currentTime = moment();
 
-    console.log("Minutes Away: " + minutesAway);
+    var diffTime = moment().diff(moment(firstArrivalConverted), "minutes");
+
+    var remainder = diffTime % snapshot.val().frequency;
+
+    var minutesAway = snapshot.val().frequency - remainder;
+
+    var nextArrival = moment().add(minutesAway, "minutes");
 
     var newRow = $("<tr>");
 
-    newRow.append("<td>" + snapshot.val().name + "</td> <td>" + snapshot.val().destination + "</td> <td>" + snapshot.val().frequency + "</td> <td>" + nextArrival + "</td> <td>" + minutesAway + "</td> <td> <button id='delete'>" + "Delete" + "</button> </td>" );
+    newRow.append("<td>" + snapshot.val().name + "</td> <td>" + snapshot.val().destination + "</td> <td>" + snapshot.val().frequency + " Minutes</td> <td>" + moment(nextArrival).format("hh:mm a") + "</td> <td>" + minutesAway + "</td> <td> <button id='delete'>" + "Delete" + "</button> </td>" );
 
     $("#trainData").append(newRow);
 
+  })
+
+  $("#delete").on("click", function() {
+    database.ref().remove( {
+       name: name,
+
+      destination: destination,
+
+      frequency: frequency,
+
+      firstArrival: firstArrival,
+
+      dateAdded: firebase.database.ServerValue.TIMESTAMP     
+    });
   })
