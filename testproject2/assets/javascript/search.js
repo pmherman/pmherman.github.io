@@ -20,3 +20,7 @@ function search() {
   });
 }
 search.js
+
+$("#search-button").on("click", function () {
+  search();
+})
