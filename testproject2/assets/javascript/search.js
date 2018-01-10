@@ -19,9 +19,9 @@ function search() {
     $('#search-container').html('<pre>' + str + '</pre>');
   });
 }
-search.js
+
+  search();
 
 $("#search-button").on("click", function () {
-  search();
   console.log("ID: " + response.item.id.videoID);
 })
