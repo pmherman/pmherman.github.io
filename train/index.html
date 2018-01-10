@@ -7,7 +7,8 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>	
 	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>		
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>		
 </head>
 <header>
 	<div class="jumbotron">
@@ -43,17 +44,18 @@
 		<div class="panel-body">
 		    <form id="train">
 		    	Train Name: <br>
-		    	<input type="text" id="name-input" name="name" required><br>
+		    	<input type="text" id="name-input" name="name" required minlength="1"><br>
 		    	Destination: <br>
-		    	<input type="text" id="destination-input" name="destination" required><br>
+		    	<input type="text" id="destination-input" name="destination" required minlength="1"><br>
 		    	Frequency (min): <br>
-		    	<input type="text" id="frequency-input" name="freqency" required><br>
+		    	<input type="number" id="frequency-input" name="freqency" required minlength="1"><br>
 		    	First Train Time: (HH:mm in Military Time) <br>
-		    	<input type="text" id="firstArrival-input" name="nextArrival" required><br>
-	    		 		    		    	
+		    	<input type="text" id="firstArrival-input" name="firstArrival" required minlength="1" pattern="^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$"><br>
+	    		<br>
+	    		<button type="submit" id="formSubmit" class="btn" value="submit">Submit</button>  		    		    	
 		    </form>
-		    <br>
-		    <button type="submit" id="formSubmit" class="btn" value="submit">Submit</button>   			
+		   
+		      			
 		</div>
 	</div>
 	<script src="assets/javascript/javascript.js" type="text/javascript"></script>

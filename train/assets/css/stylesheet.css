@@ -1,6 +1,10 @@
 input {
 	width: 95vw;
-	border: 1px solid black;
+	border: 2px solid black;
+}
+
+input:invalid {
+	border: 2px dashed red;
 }
 
 #train {
@@ -17,7 +21,10 @@ input {
 }
 
 .jumbotron {
-	background-color: #ccffff;
+	background-color: green;
+	color: white;
+	font-weight: bold;
+	text-shadow: 4px 4px 5px black;
 }
 
 .panel-default>.panel-heading {
@@ -28,6 +35,14 @@ input {
 	background-color: #47d147;
 }
 
-#delete {
+.delete {
 	background-color: #ff8566;
+}
+
+#firstArrival-input:invalid {
+	color: red;
+}
+
+#firstArrival-input:valid {
+	color: black;
 }

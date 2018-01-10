@@ -27,25 +27,43 @@
     $(".jumbotron").append(time);
   })
 
-  $("#formSubmit").on("click", function() {
-    name = $("#name-input").val().trim();
-    destination = $("#destination-input").val().trim();
-    frequency = $("#frequency-input").val().trim();
-    firstArrival = $("#firstArrival-input").val().trim();
 
-    database.ref().push({
-      name: name,
+    $("#formSubmit").on("click", function() {
+      
+      var regEx = RegExp("^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$");
 
-      destination: destination,
+      name = $("#name-input").val().trim();
+      destination = $("#destination-input").val().trim();
+      frequency = $("#frequency-input").val().trim();
+      firstArrival = $("#firstArrival-input").val().trim();
 
-      frequency: frequency,
+      if (name == "") {
+        alert("Please Enter a valid Name!");
+      } else if (destination == "") {
+          alert("Please enter a vaild destination!");
+        } else if (frequency == "") {
+            alert("Please enter a valid frequency in minutes.");
+        } else if (firstArrival == "") {
+            alert("Please enter a valid First Arrival Time.")
+        } else if (regEx.test(firstArrival) == false ) {
+            alert ("PLease enter first arrival time in valid military format ( ex: 12:00 )");
+        } else if (firstArrival.match(/^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/)) {
+         
+            database.ref().push({
+              name: name,
 
-      firstArrival: firstArrival,
+              destination: destination,
 
-      dateAdded: firebase.database.ServerValue.TIMESTAMP
-    });
+              frequency: frequency,
 
-  })
+              firstArrival: firstArrival,
+
+              dateAdded: firebase.database.ServerValue.TIMESTAMP
+        });
+      } 
+
+    })
+    
 
   database.ref().on("child_added", function(snapshot) {
 
@@ -67,7 +85,7 @@
 
     var newRow = $("<tr>");
 
-    newRow.append("<td>" + snapshot.val().name + "</td> <td>" + snapshot.val().destination + "</td> <td>" + snapshot.val().frequency + " Minutes</td> <td>" + moment(nextArrival).format("hh:mm a") + "</td> <td>" + minutesAway + "</td> <td> <button data-id='" + snapshot.key +"' class='delete'>" + "Delete" + "</button> </td>" );
+    newRow.append("<td>" + snapshot.val().name + "</td> <td>" + snapshot.val().destination + "</td> <td>" + snapshot.val().frequency + " Minutes</td> <td>" + moment(nextArrival).format("hh:mm a") + "</td> <td>" + minutesAway + " minutes" + "</td> <td> <button data-id='" + snapshot.key +"' class='delete'>" + "Delete" + "</button> </td>" );
 
     console.log("Key: " + snapshot.key);
 
@@ -81,4 +99,5 @@
     database.ref().child($(this).attr("data-id")).remove();
     location.reload();
   });
+
 
