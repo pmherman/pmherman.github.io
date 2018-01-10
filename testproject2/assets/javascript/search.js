@@ -22,6 +22,7 @@ function search() {
 
   search();
 
-$("#search-button").on("click", function () {
+$("#search-button").on("click", function (e) {
+  e.preventDefault();
   console.log("ID: " + response.item.id.videoID);
 })
