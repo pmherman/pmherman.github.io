@@ -23,4 +23,5 @@ search.js
 
 $("#search-button").on("click", function () {
   search();
+  console.log("ID: " + response.item.id.videoID);
 })
