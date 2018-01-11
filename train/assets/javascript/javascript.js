@@ -72,8 +72,6 @@
         } else if (regEx.test(firstArrival) == false ) {
             alert ("PLease enter first arrival time in valid military format ( ex: 12:00 )");
         } else if (firstArrival.match(/^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/)) {
-         
-            firebase.auth().signInWithPopup(provider);
 
             database.ref().push({
               name: name,
