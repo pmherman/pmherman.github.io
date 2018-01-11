@@ -18,18 +18,23 @@
   var minAway;
 
   $(document).ready(function() {
-    var currentTime = moment();
-
-    var time = $("<p id='time' class='text-center'>");
-
-    time.append("The Current Time is: " + moment().format("hh:mm:ss a"));
+    var currentTime = moment(new Date()),
+        time = $("<h3 id='time' class='text-center'>"),
+        update = function() {
+           time.html("The Current Time is: " + moment().format("hh:mm:ss a"));
+        };
+        update();
+        setInterval(update, 1000);
+        autoRefresh = setInterval(function() {
+          $("#currentTrainSchedule").load(firebase.database());
+        }, 5000);
 
     $(".jumbotron").append(time);
   })
 
 
-    $("#formSubmit").on("click", function() {
-      
+    $("#formSubmit").on("click", function(e) {
+      e.preventDefault();
       var regEx = RegExp("^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$");
 
       name = $("#name-input").val().trim();
@@ -60,9 +65,15 @@
 
               dateAdded: firebase.database.ServerValue.TIMESTAMP
         });
+            alert("Train Information Uploaded Successfully");
+            $("#train").each(function() {
+              this.reset();
+            })
       } 
 
     })
+
+
     
 
   database.ref().on("child_added", function(snapshot) {
@@ -73,19 +84,19 @@
 
     console.log(moment(firstArrivalConverted).format("hh:mm"));
 
-    var currentTime = moment();
+    var currentTime = moment(),
+        diffTime = moment().diff(moment(firstArrivalConverted), "minutes"),
+        remainder = diffTime % snapshot.val().frequency,
+        minutesAway = snapshot.val().frequency - remainder,
+        nextArrival = moment().add(minutesAway, "minutes"),
+        newRow = $("<tr>");
 
-    var diffTime = moment().diff(moment(firstArrivalConverted), "minutes");
-
-    var remainder = diffTime % snapshot.val().frequency;
-
-    var minutesAway = snapshot.val().frequency - remainder;
-
-    var nextArrival = moment().add(minutesAway, "minutes");
-
-    var newRow = $("<tr>");
-
-    newRow.append("<td>" + snapshot.val().name + "</td> <td>" + snapshot.val().destination + "</td> <td>" + snapshot.val().frequency + " Minutes</td> <td>" + moment(nextArrival).format("hh:mm a") + "</td> <td>" + minutesAway + " minutes" + "</td> <td> <button data-id='" + snapshot.key +"' class='delete'>" + "Delete" + "</button> </td>" );
+    //https://blog.tompawlak.org/number-currency-formatting-javascript
+    function numbersWithCommas(number) {
+      return number.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+    }
+    
+    newRow.append("<td>" + snapshot.val().name + "</td> <td>" + snapshot.val().destination + "</td> <td>" + numbersWithCommas(snapshot.val().frequency) + " Minutes</td> <td>" + moment(nextArrival).format("hh:mm a") + "</td> <td id = 'minutesAway'>" + numbersWithCommas(minutesAway) + " minutes" + "</td> <td> <button data-id='" + snapshot.key +"' class='delete'>" + "Delete" + "</button> </td>" );
 
     console.log("Key: " + snapshot.key);
 
@@ -97,6 +108,7 @@
     e.preventDefault();
     console.log($(this).attr("data-id"));
     database.ref().child($(this).attr("data-id")).remove();
+    alert("Train Data has been deleted.");
     location.reload();
   });
 

@@ -1,3 +1,7 @@
+body {
+	background-color: #d9d9d9
+}
+
 input {
 	width: 95vw;
 	border: 2px solid black;
@@ -17,18 +21,33 @@ input:invalid {
 	width: 98vw;
 	margin: auto;
 	margin-top: 25px;
-	border: 1px solid  #ccffff;
+	border: 1px solid #66b3ff;
 }
 
 .jumbotron {
+	background-image: url("../images/imageTrain.jpg");
+	background-repeat: no-repeat;
+	background-origin: border-box;
+	background-size: 100% 100%;
 	background-color: green;
-	color: white;
+	color: black;
 	font-weight: bold;
-	text-shadow: 4px 4px 5px black;
+	text-shadow: 4px 4px 5px green;
+	border-bottom: 4px solid #4d4d4d;
+}
+
+.title {
+	font-weight: bolder;
+}
+
+#time {
+	color: white;
+	text-shadow: 4px 4px 5px black;	
 }
 
 .panel-default>.panel-heading {
-	background-color:  #ccffff;
+	background-color:  #66b3ff;
+	color: white;
 }
 
 #formSubmit {
