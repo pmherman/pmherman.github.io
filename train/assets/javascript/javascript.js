@@ -11,6 +11,26 @@
 
   var database = firebase.database();
 
+  var provider = new firebase.auth.GoogleAuthProvider();
+
+  firebase.auth().signInWithPopup(provider).then(function(result) {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      var token = result.credential.accessToken;
+      // The signed-in user info.
+      var user = result.user;
+      // ...
+  }).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // The email of the user's account used.
+      var email = error.email;
+      // The firebase.auth.AuthCredential type that was used.
+      var credential = error.credential;
+  // ...
+  });
+
+
   var name;
   var destination;
   var frequency;
@@ -27,6 +47,7 @@
         update();
         setInterval(update, 1000);
     $(".jumbotron").append(time);
+
   })
 
 
@@ -52,6 +73,8 @@
             alert ("PLease enter first arrival time in valid military format ( ex: 12:00 )");
         } else if (firstArrival.match(/^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/)) {
          
+            firebase.auth().signInWithPopup(provider);
+
             database.ref().push({
               name: name,
 
