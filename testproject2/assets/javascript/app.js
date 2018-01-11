@@ -5,7 +5,7 @@ $(function() {
 		var request = gapi.client.youtube.search.list( {
 			part: "snippet",
 			type: "video",
-			q: encodeURIComponent($("#searchVid").val()).replace(/%20/g, "+"),
+			q: encodeURIComponent($("#search").val()).replace(/%20/g, "+"),
 			maxResults: 5,
 			order: "viewCount",			
 		});
