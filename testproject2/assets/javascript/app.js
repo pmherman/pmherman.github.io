@@ -19,9 +19,9 @@ $(function() {
 	});
 });
 
-// function init() {
-// 	gapi.client.setAPIKey("AIzaSyAwbv5Uageg_qwYxm898r4e4Eh5eEP6LjU");
-// 	gapi.client.load("youtube", "v3", function() {
+function init() {
+	gapi.client.setAPIKey("AIzaSyAwbv5Uageg_qwYxm898r4e4Eh5eEP6LjU");
+	gapi.client.load("youtube", "v3", function() {
 
-// 	});
-// }
+	});
+}
