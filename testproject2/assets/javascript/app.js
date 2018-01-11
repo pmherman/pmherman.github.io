@@ -10,8 +10,8 @@ $(function() {
                      'q': encodeURIComponent($("#search").val()).replace(/%20/g, "+"),
                      'type': 'video'});
 
-      }
-}); 
+      })
+  });
 
 
 
