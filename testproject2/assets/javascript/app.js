@@ -15,7 +15,7 @@ $(function() {
             order: "viewCount",
             publishedAt: "2015-01-01T00:00:00Z"
        }); 
-       execute the request
+      // execute the request
        
        request.execute(function(response) {
           var results = response.result;
