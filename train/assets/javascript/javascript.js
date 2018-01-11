@@ -20,15 +20,12 @@
   $(document).ready(function() {
     var currentTime = moment(new Date()),
         time = $("<h3 id='time' class='text-center'>"),
+        //Allows for the time to be refreshed every second on the page to keep current time
         update = function() {
            time.html("The Current Time is: " + moment().format("hh:mm:ss a"));
         };
         update();
         setInterval(update, 1000);
-        autoRefresh = setInterval(function() {
-          $("#currentTrainSchedule").load(firebase.database());
-        }, 5000);
-
     $(".jumbotron").append(time);
   })
 
@@ -42,6 +39,7 @@
       frequency = $("#frequency-input").val().trim();
       firstArrival = $("#firstArrival-input").val().trim();
 
+      //Statement to check if the data inputted into the form is valid and the form is fully filled out before pushing to the database.
       if (name == "") {
         alert("Please Enter a valid Name!");
       } else if (destination == "") {
@@ -95,7 +93,7 @@
     function numbersWithCommas(number) {
       return number.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
     }
-    
+    //posts the information to the Current Train Schedule table from the database
     newRow.append("<td>" + snapshot.val().name + "</td> <td>" + snapshot.val().destination + "</td> <td>" + numbersWithCommas(snapshot.val().frequency) + " Minutes</td> <td>" + moment(nextArrival).format("hh:mm a") + "</td> <td id = 'minutesAway'>" + numbersWithCommas(minutesAway) + " minutes" + "</td> <td> <button data-id='" + snapshot.key +"' class='delete'>" + "Delete" + "</button> </td>" );
 
     console.log("Key: " + snapshot.key);
@@ -104,6 +102,7 @@
 
   })
 
+  //Creates a dynamic listener that looks for what delete button is pressed and removes the appropiate entry from the table
   $(document).on("click", ".delete", function(e) {
     e.preventDefault();
     console.log($(this).attr("data-id"));
@@ -111,5 +110,6 @@
     alert("Train Data has been deleted.");
     location.reload();
   });
+
 
 
