@@ -28,14 +28,8 @@ $(function youTubeCall() {
           // resetVideoHeight();
        });
     });
-    
-    // $(window).on("resize", resetVideoHeight);
 });
 
-// Source: https://www.youtube.com/watch?v=-vH2eZAM30s&t=298s Name: FSquare
-// function resetVideoHeight() {
-//     $(".video").css("height", $("#results").width() * 9/16);
-// }
 //Initialize Google YouTube API Authorization
 function init() {
     gapi.client.setApiKey("AIzaSyAwbv5Uageg_qwYxm898r4e4Eh5eEP6LjU");
