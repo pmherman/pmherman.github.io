@@ -1,3 +1,10 @@
 .item {
 	color: red;
 }
+
+#results {
+	margin-top: 15px;
+	border-top: 3px solid black;
+	background-color: lightgoldenrodyellow
+	margin: auto;
+}
