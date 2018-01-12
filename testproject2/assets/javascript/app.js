@@ -11,7 +11,7 @@ $(function youTubeCall() {
             part: "snippet",
             type: "video",
             q: encodeURIComponent($("#searchInput").val()).replace(/%20/g, "+"),
-            maxResults: 3,
+            maxResults: 6,
             order: "viewCount",
        }); 
       // execute the request
