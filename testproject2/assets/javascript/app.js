@@ -21,12 +21,9 @@ $(function() {
           var results = response.result;
           $("#results").html("");
           $.each(results.items, function(index, item) {
-            $("#title").append(item.snippet.title);
-
-
-            // $.get("assets/item.html", function(data) {
-            //     $("#results").append(tplawesome(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
-            // });
+            $.get("assets/item.html", function(data) {
+                $("#results").append(tplawesome(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
+            });
           });
           resetVideoHeight();
        });
