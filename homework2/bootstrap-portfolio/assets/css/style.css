@@ -1,14 +1,14 @@
 .profile {
 	width: 225px;
-	border: 3px solid #4aaaa5;
+	border: 3px solid #9bc1ff;
 }
 
 .navbar-default {
-	background-color: #4aaaa5;
+	background-color: #9bc1ff;
 }
 
 .panel-heading {
-	background-color: #4aaaa5;
+	background-color: #9bc1ff;
 	color: white;
 	font-weight: bold;
 	text-align: center;
@@ -44,7 +44,7 @@
 }
 
 .title {
-	border-bottom: 3px solid #4aaaa5;
+	border-bottom: 3px solid #9bc1ff;
 }
 
 
@@ -65,7 +65,7 @@
     left: 0;
     width: 350px;
     line-height: 30px;
-    background-color: #4aaaa5;
+    background-color: #9bc1ff;
     font-weight: bold;
     color:white;
 }
@@ -78,7 +78,7 @@
 
 #submit {
 	color: #ffffff;
-	background: #4aaaa5;
+	background: #9bc1ff;
 	font-size: 25px;
 	border: 0px none;
 	}
@@ -94,7 +94,7 @@ body {
 }
 
 h1 {
-	color: #4aaaa5;
+	color: #9bc1ff;
 }
 
 footer {
