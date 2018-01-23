@@ -22,7 +22,7 @@ var trivia = {
 		  },
 		  correct: "b",
 		  cName: "Super Saiyan Blue",
-		  image: "<img class='gif' src='assets/images/ssbGoku.gif' alt='SSB Goku'>",
+		  image: "<img class='gif' src='assets/images/ssbgoku.gif' alt='SSB Goku'>",
 	},
 	q3: {
 		ques: "Who is the prince of all Saiyans?",
