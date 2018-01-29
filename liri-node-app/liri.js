@@ -13,10 +13,6 @@ if (process.argv.length > 2) {
         searchInput += process.argv[i] + "+";
     }
 }
-//Executes
-var execute = function(arg1, arg2) {
-    select(arg1, arg2);
-}
 //Load client keys
 var spotify = new spotify(keys.spotify);
 var client = new twitter(keys.twitter);
@@ -102,19 +98,17 @@ var omdbCall = function(searchInput) {
         }
     })
 }
-var doWhatItSays = function(searchInput) {
+var doWhatItSays = function() {
     fs.readFile("random.txt", "utf8", function(err, data) {
         if (err) {
             return console.log(err);
         }
         var outputArray = data.split(",");
-        if (outputArray.length == 2) {
-            select(outputArray[0], outputArray[1]);
-        } else {
-            select(outputArray[0]);
+        
+        if (outputArray[0] == "spotify-this-song") {
+            spotifyCall(outputArray[1]);
         }
     })
-    console.log("Name: " + searchInput);
 }
 
 //User Selector
@@ -136,5 +130,9 @@ var select = function(caseInfo) {
             console.log("Unknown Selection, please try again!");
     }
 } 
+//Executes
+var execute = function(arg1, arg2) {
+    select(arg1, arg2);
+}
 //Take in user input
 execute(process.argv[2], process.argv[3]);
