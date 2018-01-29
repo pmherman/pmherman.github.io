@@ -1,0 +1,1 @@
+NodeJS, Spotify API, Twitter API, OMDB API, File Support for reading and writing to documents
