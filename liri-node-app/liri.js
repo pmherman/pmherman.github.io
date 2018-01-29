@@ -43,13 +43,21 @@ var twitterCall = function() {
 }
 //Function to call Spotify API
 var spotifyCall = function(searchInput) {
-
-    spotify.search({ type: 'track', query: searchInput }, function(err, data) {
-    if (err) {
-        return console.log('Error occurred: ' + err);
-    } 
-    console.log(JSON.stringify(data, null, 2));
-    })
+    if (searchInput == "") {
+        searchInput = "The+Sign+Ace+of+Base";
+    }
+    spotify.search({ type: 'track', query: searchInput, limit: 1}, function(err, data) {
+        var songSearch = data.tracks.items[0];
+        if (err) {
+          return console.log('Error occurred: ' + err);
+        }
+        console.log("\n=======================\n");
+        console.log("Artist: " + songSearch.artists[0].name);
+        console.log("Song Title: " + songSearch.name);
+        console.log("Album Title: " + songSearch.album.name);
+        console.log("Preview URL: " + songSearch.preview_url);
+        console.log("\n=======================\n");
+      });      
 }
 //Function to call OMDB
 var omdbCall = function(searchInput) {
