@@ -7,10 +7,15 @@ var spotify = require("node-spotify-api");
 var request = require("request");
 var keys = require("./keys.js");
 var searchInput = "";
+//If user input is greater than 1 word
 if (process.argv.length > 2) {
     for (var i = 3; i < process.argv.length; i++) {
         searchInput += process.argv[i] + "+";
     }
+}
+//Executes
+var execute = function(arg1, arg2) {
+    select(arg1, arg2);
 }
 //Load client keys
 var spotify = new spotify(keys.spotify);
@@ -131,9 +136,5 @@ var select = function(caseInfo) {
             console.log("Unknown Selection, please try again!");
     }
 } 
-//Executes
-var execute = function(arg1, arg2) {
-    select(arg1, arg2);
-}
 //Take in user input
 execute(process.argv[2], process.argv[3]);
