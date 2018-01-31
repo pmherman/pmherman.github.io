@@ -62,7 +62,7 @@ $(document).on("click", ".gif-btn.btn", function() {
 		for (var i=0; i < results.length; i++) {
 			if (results[i].rating !== "r") {
 				//creates the gifDisplay div to house the giphy
-				var gifDisplay = $("<div class='col-md-4'>");
+				var gifDisplay = $("<div class='col-sm-4 col-md-3 col-lg-4'>");
 				//grabs the rating
 				var rating = results[i].rating;
 
