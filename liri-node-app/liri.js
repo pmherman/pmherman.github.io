@@ -31,15 +31,13 @@ var twitterCall = function() {
         //prints to command line
         for (var j = 0; j < status.length; j++) {
             console.log("\nTweet " + j + ": " + JSON.stringify(status[j], null, 2));
-
+    
+            fs.appendFile("log.txt","\r" + j + ": " + JSON.stringify(status[j], null, 2) + "\r", function(err) {
+                if (err) {
+                    console.log(err);
+                } 
+            })
         }
-        fs.appendFile("log.txt","\n " + status + "\n", function(err) {
-            if (err) {
-                console.log(err);
-            } else {
-                console.log("Tweets written to file");
-            }
-        })
     });
 }
 //----------------------Spotify Function---------------------------------//
@@ -59,13 +57,7 @@ var spotifyCall = function(searchInput) {
         console.log("Preview URL: " + songSearch.preview_url);
         console.log("\n=======================\n");
         var spotifyArray = [];
-        spotifyArray.push({
-            "Artist: ": songSearch.artists[0].name,
-            "Song Title: ": songSearch.name,
-            "Album Title: ": songSearch.album.name,
-            "Preview URL: ": songSearch.preview_url,
-        });
-        fs.appendFile("log.txt","\n" + spotifyArray.Artist + "\n", function(err) {
+        fs.appendFile("log.txt","\r\r\n================Spotify Search================" + "\r\nArtist: " + songSearch.artists[0].name + "\r\nSong Title: " + songSearch.name + "\r\nAlbum Title: " + songSearch.album.name + "\r\nPreview URL: " + songSearch.preview_url, function(err) {
             if (err) {
                 console.log(err);
             } else {
@@ -82,6 +74,7 @@ var omdbCall = function(searchInput) {
     var queryUrl = "http://www.omdbapi.com/?t=" + searchInput + "&y=&plot=short&apikey=trilogy";
     request(queryUrl, function(err, response, body) {
         //Function for Rotten Tomates Rating
+        var Movie = JSON.parse(body);
         var movieRatings = function() {
             if (JSON.parse(body).Ratings.length < 2 ) {
                 console.log("Rotten Tomates Rating: No Rating Available");
@@ -91,18 +84,18 @@ var omdbCall = function(searchInput) {
         }       
         if (!err && response.statusCode === 200) {
             console.log("\n=======================\n");
-            console.log("Movie Title: " + JSON.parse(body).Title);
-            console.log("Year: " + JSON.parse(body).Year);
-            console.log("IMDB Rating: " + JSON.parse(body).imdbRating);
+            console.log("Movie Title: " + Movie.Title);
+            console.log("Year: " + Movie.Year);
+            console.log("IMDB Rating: " + Movie.imdbRating);
             movieRatings(); //Rotten Tomates Rating
-            console.log("Country: " + JSON.parse(body).Country);
-            console.log("Language: " + JSON.parse(body).Language);
-            console.log("Actor(s): " + JSON.parse(body).Actors);
-            console.log("Plot: " + JSON.parse(body).Plot);     
+            console.log("Country: " + Movie.Country);
+            console.log("Language: " + Movie.Language);
+            console.log("Actor(s): " + Movie.Actors);
+            console.log("Plot: " + Movie.Plot);     
             console.log("\n=======================\n");       
         }
         if (!err && response.statusCode === 200) {
-            fs.appendFile("log.txt", "\nYour last movie search was: " + JSON.parse(body).Title, function(err) {
+            fs.appendFile("log.txt", "\r\r\n================Movie Search================" + "\r\nTitle: " + Movie.Title + "\r\nYear: " + Movie.Year + "\r\nIMDB Rating: " + Movie.imdbRating + "\r\n" + movieRatings() + "\r\nCountry: " + Movie.Country + "\r\nLanguage: " + Movie.Language + "\r\nActor(s): " + Movie.Actors + "\r\nPlot: " + Movie.Plot, function(err) {
                 if (err) {
                     console.log(err);
                 } else {

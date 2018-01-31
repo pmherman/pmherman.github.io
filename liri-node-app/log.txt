@@ -1,28 +1,6 @@
-
-[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]
-
-[object Object]
-
-undefined
-
-undefined
-
-undefined
-
-undefined
-
-undefined
-
-undefined
-
-undefined
-
-undefined
-
-undefined
-
-undefined
-
-Your last movie search was: Thor
-Your last movie search was: The Making of 'Star Trek: First Contact'
-Tweet 20: undefined
+
+================Spotify Search================
+Artist: Linkin Park
+Song Title: What I've Done
+Album Title: Minutes To Midnight (Explicit Version)
+Preview URL: https://p.scdn.co/mp3-preview/b2bdf31db7c3a90dfa8f5c7539f8832c4089afe8?cid=99b6839f15304dbaa779f93094d37b45
