@@ -16,7 +16,7 @@ if (process.argv.length > 2) {
 //Load client keys
 var spotify = new spotify(keys.spotify);
 var client = new twitter(keys.twitter);
-//Function to call Twitter API
+//-------------------------Twitter API---------------------//
 var twitterCall = function() {
     var status = []; //hold tweets
     var twitterScreenName = {screenname: "pmherman85", count: 20};
@@ -33,7 +33,7 @@ var twitterCall = function() {
             console.log("\nTweet " + j + ": " + JSON.stringify(status[j], null, 2));
 
         }
-        fs.appendFile("log.txt","\n" + status + "\n", function(err) {
+        fs.appendFile("log.txt","\n " + status + "\n", function(err) {
             if (err) {
                 console.log(err);
             } else {
@@ -42,7 +42,7 @@ var twitterCall = function() {
         })
     });
 }
-//Function to call Spotify API
+//----------------------Spotify Function---------------------------------//
 var spotifyCall = function(searchInput) {
     if (searchInput == "") {
         searchInput = "The+Sign+Ace+of+Base";
@@ -58,9 +58,23 @@ var spotifyCall = function(searchInput) {
         console.log("Album Title: " + songSearch.album.name);
         console.log("Preview URL: " + songSearch.preview_url);
         console.log("\n=======================\n");
+        var spotifyArray = [];
+        spotifyArray.push({
+            "Artist: ": songSearch.artists[0].name,
+            "Song Title: ": songSearch.name,
+            "Album Title: ": songSearch.album.name,
+            "Preview URL: ": songSearch.preview_url,
+        });
+        fs.appendFile("log.txt","\n" + spotifyArray.Artist + "\n", function(err) {
+            if (err) {
+                console.log(err);
+            } else {
+                console.log("Spotify Search saved to log.txt");
+            }
+        })
       });      
 }
-//Function to call OMDB
+//----------------------OMDB Call---------------------------------//
 var omdbCall = function(searchInput) {
     if (searchInput == "") {
         searchInput = "Mr+Nobody";
