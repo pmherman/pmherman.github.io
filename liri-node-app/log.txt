@@ -3,4 +3,92 @@
 Artist: Linkin Park
 Song Title: What I've Done
 Album Title: Minutes To Midnight (Explicit Version)
+Preview URL: https://p.scdn.co/mp3-preview/b2bdf31db7c3a90dfa8f5c7539f8832c4089afe8?cid=99b6839f15304dbaa779f93094d37b450: {
+  "Tweet: ": "RT @bryanmwolfe: Looking at this new article from AppAdvice - Report: Apple to Delay New iOS Features Until 2019 - https://t.co/qORCKOblnL",
+  "Created at: ": "Tue Jan 30 14:45:03 +0000 2018"
+}1: {
+  "Tweet: ": "@aidan_clemente He’s going to take pollution down to zero! #SorryNotSorry",
+  "Created at: ": "Tue Jan 30 03:49:19 +0000 2018"
+}2: {
+  "Tweet: ": "So didn’t see the ending coming #StarTrekDiscovery @startrekcbs https://t.co/LYnV0xmrf6",
+  "Created at: ": "Tue Jan 30 03:46:26 +0000 2018"
+}3: {
+  "Tweet: ": "Really need a new fitness diet #diet #fitness #nutrition #weightloss",
+  "Created at: ": "Mon Jan 22 23:10:50 +0000 2018"
+}4: {
+  "Tweet: ": "RT @SenDuckworth: I will not be lectured about what our military needs by a five-deferment draft dodger. https://t.co/gR3EbhGxBs",
+  "Created at: ": "Mon Jan 22 04:17:43 +0000 2018"
+}5: {
+  "Tweet: ": "RT @BShieldsWFTV: 20s &amp; 30s arrive tomorrow night! https://t.co/CcsSHy6JG1",
+  "Created at: ": "Tue Jan 16 13:28:12 +0000 2018"
+}6: {
+  "Tweet: ": "Everything is going to be smart enabled before too long. https://t.co/NPYqH4vYn8",
+  "Created at: ": "Sat Jan 13 03:53:56 +0000 2018"
+}7: {
+  "Tweet: ": "Just made my kitchen light smart and WiFi enabled. #wemo #IoT #technology #wifi #IT",
+  "Created at: ": "Sat Jan 13 03:51:47 +0000 2018"
+}8: {
+  "Tweet: ": "@CitySanfordFL is there anything that can be done about all the jay walkers on 17/92. It’s becoming a serious hazar… https://t.co/KrF69bqrgP",
+  "Created at: ": "Tue Jan 09 12:54:28 +0000 2018"
+}9: {
+  "Tweet: ": "Ready for another day of work!",
+  "Created at: ": "Mon Jan 08 14:43:39 +0000 2018"
+}10: {
+  "Tweet: ": "Still one of my all time favorite series @StarTrek https://t.co/1mSaD6PFLX",
+  "Created at: ": "Mon Jan 08 14:42:46 +0000 2018"
+}11: {
+  "Tweet: ": "This episode was incredible!! Everything about it @startrekcbs @jonathansfrakes https://t.co/aGRmxmqbJG",
+  "Created at: ": "Mon Jan 08 14:42:07 +0000 2018"
+}12: {
+  "Tweet: ": "Back at it! Took a nap by mistake so everything got pushed back 😂 #mistake #nap #workout #energy… https://t.co/Jsx1SeBILR",
+  "Created at: ": "Sun Jan 07 00:59:02 +0000 2018"
+}13: {
+  "Tweet: ": "I don’t want to go to work tomorrow #cold #sleep #work",
+  "Created at: ": "Tue Jan 02 04:12:22 +0000 2018"
+}14: {
+  "Tweet: ": "RT @GeorgeTakei: If Trump fires Mueller, patriotic Americans would be well within their rights to shut the country down through massive and…",
+  "Created at: ": "Tue Dec 19 01:21:46 +0000 2017"
+}15: {
+  "Tweet: ": "RT @EdKrassen: JUST IN:  Senator Chuck Schumer says there will be a Senate Vote to overturn the FCC's ruling on #NetNeutrality  -- Only a s…",
+  "Created at: ": "Tue Dec 19 01:21:37 +0000 2017"
+}16: {
+  "Tweet: ": "RT @SenSanders: As we come toward the end of 2017, I hope and expect that most Americans know that almost every promise that @realDonaldTru…",
+  "Created at: ": "Tue Dec 19 01:21:19 +0000 2017"
+}17: {
+  "Tweet: ": "The @FCC should stand up for the consumers it represents and protect #NetNeutrality on December 14 https://t.co/4BltqUXEcL",
+  "Created at: ": "Wed Dec 13 04:27:02 +0000 2017"
+}18: {
+  "Tweet: ": "@ciarahanna20 Did that! Best decision ever :)",
+  "Created at: ": "Mon Dec 04 03:00:05 +0000 2017"
+}19: {
+  "Tweet: ": "RT @SenSanders: FACT: Under the Republican plan, a single mother making minimum wage with two kids would get only a $75 tax credit. Meanwhi…",
+  "Created at: ": "Wed Nov 29 13:16:25 +0000 2017"
+}
+================Spotify Search================
+Artist: Green Day
+Song Title: American Idiot
+Album Title: American Idiot (Regular Edition)
+Preview URL: https://p.scdn.co/mp3-preview/d5d48190dacabe9e45e2e1fe7616c4e411b28b53?cid=99b6839f15304dbaa779f93094d37b45
+================Movie Search================
+Title: Star Trek
+Year: 2009
+IMDB Rating: 8.0
+undefined
+Country: USA, Germany
+Language: English
+Actor(s): Chris Pine, Zachary Quinto, Leonard Nimoy, Eric Bana
+Plot: The brash James T. Kirk tries to live up to his father's legacy with Mr. Spock keeping him in check as a vengeful Romulan from the future creates black holes to destroy the Federation one planet at a time.
+================Movie Search================
+Title: Mr. Nobody
+Year: 2009
+IMDB Rating: 7.9
+undefined
+Country: Belgium, Germany, Canada, France, USA, UK
+Language: English, Mohawk
+Actor(s): Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+================Spotify Search================
+Artist: Linkin Park
+Song Title: What I've Done
+Album Title: Minutes To Midnight (Explicit Version)
 Preview URL: https://p.scdn.co/mp3-preview/b2bdf31db7c3a90dfa8f5c7539f8832c4089afe8?cid=99b6839f15304dbaa779f93094d37b45
