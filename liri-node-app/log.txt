@@ -91,4 +91,56 @@ Plot: A boy stands on a station platform as a train is about to leave. Should he
 Artist: Linkin Park
 Song Title: What I've Done
 Album Title: Minutes To Midnight (Explicit Version)
-Preview URL: https://p.scdn.co/mp3-preview/b2bdf31db7c3a90dfa8f5c7539f8832c4089afe8?cid=99b6839f15304dbaa779f93094d37b45
+Preview URL: https://p.scdn.co/mp3-preview/b2bdf31db7c3a90dfa8f5c7539f8832c4089afe8?cid=99b6839f15304dbaa779f93094d37b45
+================Movie Search================
+Title: Star Trek
+Year: 2009
+IMDB Rating: 8.0
+Rotten Tomatoes Rating: 94%
+Country: USA, Germany
+Language: English
+Actor(s): Chris Pine, Zachary Quinto, Leonard Nimoy, Eric Bana
+Plot: The brash James T. Kirk tries to live up to his father's legacy with Mr. Spock keeping him in check as a vengeful Romulan from the future creates black holes to destroy the Federation one planet at a time.
+================Movie Search================
+Title: Star Trek
+Year: 2009
+IMDB Rating: 8.0
+Country: USA, Germany
+Language: English
+Actor(s): Chris Pine, Zachary Quinto, Leonard Nimoy, Eric Bana
+Plot: The brash James T. Kirk tries to live up to his father's legacy with Mr. Spock keeping him in check as a vengeful Romulan from the future creates black holes to destroy the Federation one planet at a time.
+================Movie Search================
+Title: The Making of 'Star Trek: First Contact'
+Year: 1996
+IMDB Rating: 6.3
+Rotten Tomates Rating: No Rating Available
+Country: USA
+Language: English
+Actor(s): N/A
+Plot: N/A
+================Movie Search================
+Title: The Making of 'Star Trek: First Contact'
+Year: 1996
+IMDB Rating: 6.3
+Country: USA
+Language: English
+Actor(s): N/A
+Plot: N/A
+================Movie Search================
+Title: The Making of 'Star Trek: First Contact'
+Year: 1996
+IMDB Rating: 6.3
+Rotten Tomates Rating: No Rating Available 
+Country: USA
+Language: English
+Actor(s): N/A
+Plot: N/A
+================Movie Search================
+Title: Star Trek
+Year: 2009
+IMDB Rating: 8.0
+Rotten Tomatoes Rating: 94%
+Country: USA, Germany
+Language: English
+Actor(s): Chris Pine, Zachary Quinto, Leonard Nimoy, Eric Bana
+Plot: The brash James T. Kirk tries to live up to his father's legacy with Mr. Spock keeping him in check as a vengeful Romulan from the future creates black holes to destroy the Federation one planet at a time.

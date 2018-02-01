@@ -76,10 +76,24 @@ var omdbCall = function(searchInput) {
         //Function for Rotten Tomates Rating
         var Movie = JSON.parse(body);
         var movieRatings = function() {
-            if (JSON.parse(body).Ratings.length < 2 ) {
+            if (Movie.Ratings.length < 2 ) {
+                fs.appendFile("log.txt", "\r\r\n================Movie Search================" + "\r\nTitle: " + Movie.Title + "\r\nYear: " + Movie.Year + "\r\nIMDB Rating: " + Movie.imdbRating + "\r\nRotten Tomates Rating: No Rating Available \r\nCountry: " + Movie.Country + "\r\nLanguage: " + Movie.Language + "\r\nActor(s): " + Movie.Actors + "\r\nPlot: " + Movie.Plot, function(err) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        console.log("Movie Info written to file");
+                    }
+                }); 
                 console.log("Rotten Tomates Rating: No Rating Available");
             } else {
-                console.log("Rotten Tomatoes Rating: " + JSON.parse(body).Ratings[1].Value);
+                fs.appendFile("log.txt", "\r\r\n================Movie Search================" + "\r\nTitle: " + Movie.Title + "\r\nYear: " + Movie.Year + "\r\nIMDB Rating: " + Movie.imdbRating + "\r\nRotten Tomatoes Rating: " + Movie.Ratings[1].Value + "\r\nCountry: " + Movie.Country + "\r\nLanguage: " + Movie.Language + "\r\nActor(s): " + Movie.Actors + "\r\nPlot: " + Movie.Plot, function(err) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        console.log("Movie Info written to file");
+                    }
+                });
+                console.log("Rotten Tomatoes Rating: " + Movie.Ratings[1].Value);
             }
         }       
         if (!err && response.statusCode === 200) {
@@ -93,15 +107,6 @@ var omdbCall = function(searchInput) {
             console.log("Actor(s): " + Movie.Actors);
             console.log("Plot: " + Movie.Plot);     
             console.log("\n=======================\n");       
-        }
-        if (!err && response.statusCode === 200) {
-            fs.appendFile("log.txt", "\r\r\n================Movie Search================" + "\r\nTitle: " + Movie.Title + "\r\nYear: " + Movie.Year + "\r\nIMDB Rating: " + Movie.imdbRating + "\r\nCountry: " + Movie.Country + "\r\nLanguage: " + Movie.Language + "\r\nActor(s): " + Movie.Actors + "\r\nPlot: " + Movie.Plot, function(err) {
-                if (err) {
-                    console.log(err);
-                } else {
-                    console.log("Movie Info written to file");
-                }
-            });    
         }
     })
 }
