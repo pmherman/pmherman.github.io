@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>Rock, Paper, Scissors</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <style>
+            body {
+                background-color: aquamarine;
+            }
+            #game {
+                border: 1px solid black;
+                background-color: lightgrey;
+                width: 30vw;
+                position: relative;
+                margin: auto;
+            }
+            .box {
+                position: relative;
+                margin: auto;
+                margin-bottom: 5px;
+                width: 200px;
+                height: 200px;
+                border: solid 1px black;
+                background-color: lightcyan;
+            }
+            img {
+                width: 200px;
+                height: 200px;
+                margin: auto;
+            }
+            #rock, #paper, #scissors {
+                margin-top: 75px;
+                margin-bottom: auto;
+                position: relative;
+                display: inline-block;
+                font-size: 24px;
+                border: 1px solid green;
+                padding: 2px;
+            }
+        </style>
+    </head>
+    <header>
+        
+    </header>
+    <body>
+        <div class="container-fluid">
+            <div class='row'>
+                <div class='col-md-12'>
+                    <h1 style="text-align: center">Rock, Paper, Scissors</h1>
+                    <h2 style="text-align: center">Rock beats scissors, Scissors beats paper, and Paper beats rock</h2>
+                    <br>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-md-12'>
+                    <div class = 'box text-center'>
+                        <span class='align-middle' id='rock' onclick="beginGame('rock')">ROCK</span>
+                    </div>
+                    <div class = 'box text-center'>
+                            <span class='align-middle' id='paper' onclick="beginGame('paper')">PAPER</span>
+                    </div>
+                    <div class = 'box text-center'>
+                            <span class='align-middle' id='scissors' onclick="beginGame('scissors')">SCISSORS</span>
+                    </div>
+                </div>
+            </div>
+            <div class='row text-center'>
+                <div class='col-md-12'>
+                    <br>
+                    <div id='game' style='visibility: hidden'></div>
+                    <br>
+                    <div id='winner' style='text-align: center; color: red; font-weight: bold'></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var computer = ['rock', 'paper', 'scissors'],
+                userInput,
+                game = document.getElementById('game'),
+                winner = document.getElementById('winner');
+
+                function beginGame(userInput) {
+                    console.log('UserInPUT: ' + userInput);
+                    var computerChoice = computer[Math.floor(Math.random() * computer.length)]
+                    game.style.visibility = "visible";
+                    game.innerHTML = `You have chosen ${userInput} as your selection. <br>`;
+                    game.innerHTML +=`The computer chose ${computerChoice} as its selection.`;
+
+                    if (userInput === computerChoice) {
+                        winner.innerHTML ="It's a TIE! <br>";
+                    } else if (userInput === ('rock' || 'Rock') && computerChoice != 'paper') {
+                        winner.innerHTML =`User wins with a selection of ${userInput} <br>`;
+                    } else if (userInput === ('paper' || 'Paper') && computerChoice != 'scissors') {
+                        winner.innerHTML =`User wins with a selection of ${userInput} <br>`;
+                    } else if (userInput === ('scissors' || 'Scissors' && computerChoice != 'rock')) {
+                        winner.innerHTML =`User wins with a selection of ${userInput} <br>`;
+                    } else {
+                        winner.innerHTML =`Computer wins with a selection of ${computerChoice} <br>`;
+                    }
+                }
+        </script>
+    </body>
+</html>
